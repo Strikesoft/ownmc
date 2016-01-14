@@ -19,23 +19,29 @@
             <ul class="nav navbar-nav col-sm-5">
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ path('front_homepage') }}">
-                        Accueil <span class="sr-only">(current)</span>
+                        {% trans %}Home{% endtrans %} <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('media_homepage') }}">Medias</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">A propos</a>
+                    <a class="nav-link" href="#">
+                        {% trans %}About{% endtrans %}
+                    </a>
                 </li>
                 {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('user_registration') }}">Inscription</a>
+                    <a class="nav-link" href="{{ path('user_registration') }}">
+                        {% trans %}Register{% endtrans %}
+                    </a>
                 </li>
                 {% endif %}
                 {% if is_granted('ROLE_ADMIN') %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('admin_homepage') }}">Administration</a>
+                    <a class="nav-link" href="{{ path('admin_homepage') }}">
+                        {% trans %}Admin{% endtrans %}
+                    </a>
                 </li>
                 {% endif %}
             </ul>
@@ -43,9 +49,13 @@
                 <li class="nav-item">
                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                         <span id="spanConnected">{{ app.user.username }} - </span>
-                        <a class="nav-link" style="display: inline-block;" href="{{ path('fos_user_security_logout') }}">Déconnection</a>
+                        <a class="nav-link" style="display: inline-block;" href="{{ path('fos_user_security_logout') }}">
+                            {% trans %}Sign out{% endtrans %}
+                        </a>
                     {% else %}
-                        <a class="nav-link" href="{{ path('fos_user_security_login') }}">Connexion</a>
+                        <a class="nav-link" href="{{ path('fos_user_security_login') }}">
+                            {% trans %}Sign in{% endtrans %}
+                        </a>
                     {% endif %}
                 </li>
             </ul>
@@ -55,7 +65,7 @@
         </div>
         <footer class="footer bg-primary-front-page">
             <div id="footerContainer" class="container">
-                <p class="text-muted">© 2015 - ownMc all rights reserved.</p>
+                <p class="text-muted">© 2015 - ownMc {% trans %}Rights{% endtrans %}</p>
             </div>
         </footer>
         <script src="{{ asset('js/libs/jquery.min.js') }}"></script>

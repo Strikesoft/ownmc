@@ -4,23 +4,23 @@
         <body>
             <trans-unit id="1">
                 <source>Username</source>
-                <target>Identifiant</target>
+                <target>Username</target>
             </trans-unit>
             <trans-unit id="2">
                 <source>Password</source>
-                <target>Mot de passe</target>
+                <target>Password</target>
             </trans-unit>
             <trans-unit id="3">
                 <source>Remember me</source>
-                <target>Se souvenir de moi</target>
+                <target>Remember me</target>
             </trans-unit>
             <trans-unit id="4">
                 <source>Sign in</source>
-                <target>Connection</target>
+                <target>Sign in</target>
             </trans-unit>
             <trans-unit id="5">
                 <source>Error sign in</source>
-                <target>Une erreur est survenue ou votre demande d'inscription n'a pas été validé.</target>
+                <target>An error ocurred during the sign in process</target>
             </trans-unit>
         </body>
     </file>
